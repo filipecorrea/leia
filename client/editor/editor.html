@@ -1,0 +1,48 @@
+
+<!-- <div id="alert" class="alert alert-warning" role="alert">
+<strong>Atenção!</strong> Para uma análise mais exata, seu texto deve conter pelo menos 100 palavras.
+</div> -->
+
+<section class="col-xs-12 col-sm-7 col-sm-offset-1">
+  <textarea ng-model="title" ng-auto-expand class="title" placeholder="Título"></textarea>
+
+  <textarea id="text" ng-model="text" ng-auto-expand class="text" ng-keyup="textChanged($event)" placeholder="Digite seu texto aqui..." autofocus rows="9"></textarea>
+  <div id="marker" ng-bind-html="highlight" class="highlight"></div>
+</section>
+
+<aside id="report" class="col-xs-12 col-sm-3" ng-show="text.length">
+  <h2>Legibilidade</h2>
+
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{readabilityIndex}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( readabilityIndex + '%' ) }" style="min-width: 1em;"></div>
+  </div>
+
+  <ul class="col-xs-6 col-sm-12">
+    <li><strong>Nível de leitura</strong></li>
+    <li>{{level}}</li>
+    <li><strong>Sugestão de uso</strong></li>
+    <li>{{grade}}</li>
+    <!-- <li><strong>Tempo de leitura</strong> <span>30 minutos</span></li> -->
+  </ul>
+  <ul class="col-xs-6 col-sm-12">
+    <!-- <li><strong>Parágrafos</strong> <span id="paragraphs">0</span></li> -->
+    <li><strong>Frases:</strong> <span>{{sentencesCount}}</span></li>
+    <li><strong>Palavras:</strong> <span>{{wordsCount}}</span></li>
+    <li><strong>Sílabas:</strong> <span>{{syllablesCount}}</span></li>
+  </ul>
+  <ul class="col-xs-6 col-sm-12" ng-show="hardSentencesCount > 0 || veryHardSentencesCount > 0">
+    <li ng-show="veryHardSentencesCount > 0">
+      <strong class="veryHardSubtitle">{{veryHardSentencesCount}}</strong>
+      <span ng-show="veryHardSentencesCount == 1">frase muito difícil de ler.</span>
+      <span ng-show="veryHardSentencesCount > 1">frases muito difíceis de ler.</span>
+    </li>
+    <li ng-show="hardSentencesCount > 0">
+      <strong class="hardSubtitle">{{hardSentencesCount}}</strong>
+      <span ng-show="hardSentencesCount == 1">frase difícil de ler.</span>
+      <span ng-show="hardSentencesCount > 1">frases difíceis de ler.</span>
+    </li>
+  </ul>
+</aside>
+
+<!-- Loader -->
+<!-- <loader ng-show=""></loader> -->

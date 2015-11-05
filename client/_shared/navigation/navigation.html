@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#editor">Leia</a>
+    </div>
+
+    <div class="collapse navbar-collapse" collapse="navbarCollapsed">
+      <ul class="nav navbar-nav">
+        <li ng-class="getClass('/editor')"><a href="#editor">Editor</a></li>
+        <li ng-class="getClass('/about')"><a href="#about">Sobre</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right social" ng-social-buttons
+        data-url="'http://leia.mybluemix.net/'"
+        data-title="'Leia'"
+        data-description="'Escreva e avalie o grau de legibilidade de seu texto com Leia.'"
+        data-image="'../../images/logo.png'">
+        <li><a class="ng-social-facebook"><i class="fa fa-lg fa-facebook"></i></a></li>
+        <li><a class="ng-social-twitter" data-title="'Escreva e avalie o grau de legibilidade do seu texto com Leia.'"><i class="fa fa-lg fa-twitter"></i></a></li>
+        <li class="ng-social-linkedin"><i class="fa fa-lg fa-linkedin"></i></li>
+      </ul>
+    </div>
+</nav>

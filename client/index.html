@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Leia</title>
+  <meta name="description" content="Escreva e avalie o grau de legibilidade do seu texto com Leia.">
+  <meta name="keywords" content="leia, legibilidade, texto, grau, nivel, frases, palavras">
+  <meta name="author" content="Filipe Corrêa">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="_common/style.css">
+  <link rel="stylesheet" href="_common/font-awesome-4.4.0/css/font-awesome.min.css">
+
+  <!-- Components -->
+  <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-social/angular-social.js"></script>
+
+  <!-- Application -->
+  <script src="app.js"></script>
+
+  <!-- Routes -->
+  <script src="editor/editor.route.js"></script>
+  <script src="about/about.route.js"></script>
+
+  <!-- Directives -->
+  <!-- <script src="_shared/loader/loader.directive.js"></script> -->
+  <script src="_shared/textarea/textarea.directive.js"></script>
+
+  <!-- Services -->
+  <!-- <script src="storage/cookie.service.js"></script> -->
+  <!-- <script src="storage/local.service.js"></script> -->
+
+  <!-- Controllers -->
+  <script src="_shared/navigation/navigation.controller.js"></script>
+  <script src="editor/editor.controller.js"></script>
+  <script src="about/about.controller.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <div ui-view='navigation' ng-class='[state.current.data.animateMenu]'></div>
+  <div ui-view='main' ng-class='[state.current.data.animateMain]' class='view--animated'></div>
+</body>
+</html>

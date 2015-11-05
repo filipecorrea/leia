@@ -1,0 +1,67 @@
+textarea {
+  display: block;
+	width: 100%;
+  padding: 0;
+  border: none;
+	resize: none;
+	overflow: hidden;
+
+  // border: 1px solid blue;
+
+  &:focus {
+     outline: 0;
+  }
+
+  &.title {
+    margin-top: 0.5em;
+    padding-top: 4px;
+    font-size: 36px;
+    font-weight: 300;
+  }
+
+  &.text {
+    position: absolute;
+    background-color: rgba(1,1,1,0);
+    z-index: 1;
+  }
+}
+
+div.highlight {
+  color: rgba(1,1,1,0);
+  opacity: .7;
+  // border: 1px solid red;
+  white-space: pre-wrap;
+
+  span.warning {
+    background-color: #FFE4B5;
+  }
+
+  span.error {
+    background-color: #F08080;
+  }
+}
+
+aside {
+  -webkit-transition:all ease-out 0.5s;
+  transition:all ease-out 0.5s;
+
+  &.ng-hide {
+    opacity: 0;
+  }
+
+  .progress-bar {
+    background-color: #B0C4DE;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  .hardSubtitle {
+    background-color: #FFE4B5;
+    padding: 1px 8px;
+  }
+
+  .veryHardSubtitle {
+    background-color: #F08080;
+    padding: 1px 8px;
+  }
+}

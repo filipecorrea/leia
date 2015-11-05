@@ -1,0 +1,40 @@
+.navbar {
+  font-size: 0.8em;
+
+  .navbar-brand {
+    font-weight: 400;
+  }
+
+  .social {
+    margin-left: -45px;
+    margin-right: 10px;
+
+    li {
+      height: 50px;
+      float: left;
+      list-style: none;
+
+      a {
+        color: #777777;
+        line-height: 50px;
+
+        i {
+          padding: 10px 17px;
+
+          &.fa-facebook:hover {
+              color: #4060A5;
+          }
+
+          &.fa-twitter:hover {
+              color: #00ABE3;
+          }
+
+          &.fa-linkedin:hover {
+              color: #0094BC;
+          }
+        }
+      }
+    }
+  }
+
+}

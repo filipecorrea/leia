@@ -131,4 +131,8 @@ angular.module('myApp')
 
   checkSentencesComplexity();
 
+  calculateData($scope.text);
+
+  fleschKincaidEase();
+
 });

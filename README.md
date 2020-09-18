@@ -1,6 +1,6 @@
 # Leia
 
-Leia is a tool that assesses the legibility of a text and can assist teachers selecting which content to use with each level of education.
+Leia tool assesses the legibility of Portuguese texts and can assist teachers selecting which content to use with each level of education.
 
 ## Prerequisites
 

@@ -12,6 +12,7 @@ on:
 
 env:
   IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
+  IBM_CLOUD_CF_API: ${{ secrets.IBM_CLOUD_CF_API }}
   IBM_CLOUD_CF_ORG: ${{ secrets.IBM_CLOUD_CF_ORG }}
   IBM_CLOUD_CF_SPACE: ${{ secrets.IBM_CLOUD_CF_SPACE }}
 
@@ -41,7 +42,7 @@ jobs:
 
       - name: Target a Cloud Foundry org and space
         run: |
-          ibmcloud target --cf -o "${IBM_CLOUD_CF_ORG}" -s "${IBM_CLOUD_CF_SPACE}"
+          ibmcloud target --cf-api "${IBM_CLOUD_CF_API}" -o "${IBM_CLOUD_CF_ORG}" -s "${IBM_CLOUD_CF_SPACE}"
 
       - name: Deploy
         run: |

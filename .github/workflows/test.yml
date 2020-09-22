@@ -25,25 +25,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Install IBM Cloud CLI
-        run: |
-          curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-          ibmcloud --version
-          ibmcloud config --check-version=false
-
-      - name: Install Cloud Foundry CLI
-        run: |
-          ibmcloud cf install
-
-      - name: Authenticate with IBM Cloud CLI
-        run: |
-          ibmcloud login --apikey "${IBM_CLOUD_API_KEY}" --no-region -g default
-
-      - name: Target a Cloud Foundry org and space
-        run: |
-          ibmcloud target --cf-api "${IBM_CLOUD_CF_API}" -o "${IBM_CLOUD_CF_ORG}" -s "${IBM_CLOUD_CF_SPACE}"
-
-      - name: Deploy to Cloud Foundry
-        run: |
-          ibmcloud cf push
+      - name: Deploy to IBM Cloud Foundry
+        # You may pin to the exact commit or the version.
+        # uses: IBM/cloudfoundry-deploy@0b25a51081026e1a515d2dff475d9e01141b6613
+        uses: IBM/cloudfoundry-deploy@v1.0-beta
+        with:
+          IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}

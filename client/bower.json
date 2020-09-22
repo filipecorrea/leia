@@ -1,8 +1,8 @@
 {
-  "name": "app",
+  "name": "leia",
   "version": "0.0.0",
   "authors": [
-    "Filipe Corrêa <filipecorrea@br.ibm.com>"
+    "Filipe Correa <filipecorrea@me.com>"
   ],
   "license": "MIT",
   "ignore": [

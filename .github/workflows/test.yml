@@ -44,6 +44,6 @@ jobs:
         run: |
           ibmcloud target --cf-api "${IBM_CLOUD_CF_API}" -o "${IBM_CLOUD_CF_ORG}" -s "${IBM_CLOUD_CF_SPACE}"
 
-      - name: Deploy
+      - name: Deploy to Cloud Foundry
         run: |
           ibmcloud cf push

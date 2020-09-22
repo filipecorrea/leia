@@ -4,27 +4,20 @@ Leia tool assesses the legibility of Portuguese texts and can assist teachers se
 
 ## Prerequisites
 
-- [Node.js]
-- [Bower]
-- [Grunt]
+- [Node.js](http://nodejs.org)
 
 ## Setup
 
-Install [npm] packages. At root directory, run:
+Install project dependencies:
 
-`$ npm install`
-
-Install [Bower] packages. At client directory, run:
-
-`$ bower install`
+```console
+npm install
+```
 
 ## Run
 
 At root directory, run:
 
-`$ grunt`
-
-[Node.js]: <http://nodejs.org>
-[Bower]: <http://bower.io>
-[Grunt]: <http://gruntjs.com>
-[npm]: <https://www.npmjs.com>
+```console
+npm start
+```

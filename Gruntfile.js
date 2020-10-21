@@ -1,9 +1,8 @@
-module.exports = function(grunt) {
-
-  grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-express-server');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+module.exports = function (grunt) {
+  grunt.loadNpmTasks('grunt-open')
+  grunt.loadNpmTasks('grunt-express-server')
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-sass')
 
   grunt.initConfig({
     // Start express server
@@ -18,28 +17,28 @@ module.exports = function(grunt) {
     // Open the web browser
     open: {
       server: {
-          path: 'http://localhost:3000/'
+        path: 'http://localhost:3000/'
       }
     },
 
     // Compile sass files
     sass: {
-			dist: {
-				files: {
-					'client/_common/style.css' : 'client/_common/style.scss'
-				}
-			}
-		},
+      dist: {
+        files: {
+          'client/_common/style.css': 'client/_common/style.scss'
+        }
+      }
+    },
 
     watch: {
       // Compile and reload sass changes
-			css: {
-				files: '**/*.scss',
-				tasks: ['sass'],
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass'],
         options: {
           livereload: true
         }
-			},
+      },
 
       // Reload html changes
       html: {
@@ -58,10 +57,8 @@ module.exports = function(grunt) {
       }
 
     }
-  });
+  })
 
-
-  grunt.registerTask('default', ['express:dev', 'open', 'sass', 'watch']);
-  grunt.registerTask('teste', ['open']);
-
-};
+  grunt.registerTask('default', ['express:dev', 'open', 'sass', 'watch'])
+  grunt.registerTask('teste', ['open'])
+}

@@ -1,14 +1,12 @@
 angular.module('myApp')
-.controller('navigationController', function ($rootScope, $location, $scope, $timeout) {
+  .controller('navigationController', function ($rootScope, $location, $scope, $timeout) {
+    $scope.navbarCollapsed = true
 
-  $scope.navbarCollapsed = true;
-
-  $scope.getClass = function (path) {
-    if ($location.path().substr(0, path.length) === path) {
-      return 'active';
-    } else {
-      return '';
+    $scope.getClass = function (path) {
+      if ($location.path().substr(0, path.length) === path) {
+        return 'active'
+      } else {
+        return ''
+      }
     }
-  };
-
-});
+  })
